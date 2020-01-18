@@ -31,7 +31,11 @@
             var i = 1001;
 
             while(true) {
+                // Remove old progress class, so you can add the new class in the next step
                 bar.removeClass("bar-" + i);
+
+                //if its at the end reset it
+                //else just let it grow further
                 if (i > 1000) {
                     await Sleep(500);
                     $("." + colId).prop('checked', true);
@@ -45,6 +49,7 @@
                     await Sleep(500);
                 }
                 else {
+                    // Make the progress appear random
                     i += Math.floor(Math.random() * Math.floor(Math.random() * 25));
                     bar.addClass("bar-" + (i));
                     await Sleep(50 + Math.floor(Math.random() * + Math.floor(Math.random() * 10) * Math.random() * Math.floor(Math.random() * 10) * Math.random() * Math.floor(Math.random() * 10) * Math.random()));
