@@ -39,14 +39,16 @@
                     if (colId > 3) {
                         colId = 1;
                     }
-                    i = 5;
+                    i = 0;
                     bar.removeClass("bar-0");
-                    bar.addClass("bar-" + (i + 1));
+                    bar.addClass("bar-" + (i));
                     await Sleep(500);
                 }
-                i += 0 + Math.floor(Math.random() * 6);
-                bar.addClass("bar-" + (i + 1));
-                await Sleep(50);
+                else {
+                    i += Math.floor(Math.random() * Math.floor(Math.random() * 25));
+                    bar.addClass("bar-" + (i));
+                    await Sleep(50 + Math.floor(Math.random() * + Math.floor(Math.random() * 10) * Math.random() * Math.floor(Math.random() * 10) * Math.random() * Math.floor(Math.random() * 10) * Math.random()));
+                }
             }
         }
     </script>
@@ -58,6 +60,7 @@
     <header>
         <h1>This WebSite <strong>Alpix.eu</strong> is still in Progress</h1>
         <p>... like this pretty liquid progress-bar.</p>
+        <p>It progresses random!</p>
     </header>
     <section>
         <article>
