@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="en" >
+
+<head>
+    <meta charset="utf-8">
+    <title>Alpix.eu</title>
+    <meta name="description" content="Pure CSS Progress, a pretty liquid progress-bar by RGG">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  
+      <link rel="stylesheet" href="./style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <style>
+      body {
+        line-height: 2.7em;
+      }
+      </style>
+  <script>
+    $( document ).ready(function() {
+        run();
+        });
+    function Sleep(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    }
+    async function run() {
+        var colId = 1;
+            for (var i = 1000; i < 1200; i++) {
+                $(".bar").removeClass("bar-" +i);
+                if(i > 1000) {
+                    await Sleep(500);
+                    $("."+colId).prop('checked', true);
+                    colId += 1;
+                    if( colId > 3) {
+                        colId = 1;
+                    }
+                    i = 5;
+                    $(".bar").removeClass("bar-0");
+                    $(".bar").addClass("bar-" + (i+1));
+                    await Sleep(500);
+                }
+                i+= 0 + Math.floor(Math.random() * 6);
+                $(".bar").addClass("bar-" + (i+1));
+                await Sleep(50);
+            }
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+        <header>
+            <h1>This WebSite <strong>Alpix.eu</strong> is still in Progress</h1>
+            <p>... like this pretty liquid progress-bar.</p>
+        </header>
+        <section>
+            <article>
+                <input type="radio" name="switch-color" id="red" class="1" checked>
+                <input type="radio" name="switch-color" id="cyan" class="2">
+                <input type="radio" name="switch-color" id="lime" class="3">
+                <div class="chart">
+                    <div class="bar bar-0 white">
+                        <div class="face top">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face side-0">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face floor">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face side-a"></div>
+                        <div class="face side-b"></div>
+                        <div class="face side-1">
+                            <div class="growing-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <p>You can change the color :)</p>
+                <nav class="actions">
+                    <label for="red">Magenta</label>
+                    <label for="cyan">Cyan</label>
+                    <label for="lime">Lime</label>
+                </nav>
+            </article>
+        </section>
+    </div>
+  
+  
+
+</body>
+
+</html>
