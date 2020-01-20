@@ -35,5 +35,26 @@ async function run() {
             bar.addClass("bar-" + (i));
             await Sleep(50 + Math.floor(Math.random() * + Math.floor(Math.random() * 10) * Math.random() * Math.floor(Math.random() * 10) * Math.random() * Math.floor(Math.random() * 10) * Math.random()));
         }
+
+        updatePercents(i);
     }
+}
+
+/*
+ * Update the text that shows the progress in percent
+ */
+function updatePercents(iterator) {
+    iterator /= 10;
+    if(iterator > 0) {
+        while(iterator%10 === 0) {
+            iterator /= 10;
+        }
+    }
+
+    // Max 100%
+    if(iterator > 100) {
+        iterator = 100;
+    }
+
+    $(".percent").text(iterator + "%");
 }
