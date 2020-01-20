@@ -19,14 +19,15 @@ async function run() {
         //else just let it grow further
         if (i > 1000) {
             await Sleep(500);
+            i = 0;
+            bar.removeClass("bar-0");
+            bar.addClass("bar-" + (i));
+            updatePercents(i);
             $("." + colId).prop('checked', true);
             colId += 1;
             if (colId > 3) {
                 colId = 1;
             }
-            i = 0;
-            bar.removeClass("bar-0");
-            bar.addClass("bar-" + (i));
             await Sleep(500);
         }
         else {
