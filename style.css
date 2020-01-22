@@ -4386,3 +4386,17 @@ input[id='lime']:checked ~ .actions label[for='lime'] {
   background-color: #0a4069;
 }
 
+
+input[id='resume']:checked ~ * .pause {
+  display: inline;
+}
+input[id='resume']:checked ~ * .resume {
+  display: none;
+}
+
+input[id='pause']:checked ~ * .resume {
+  display: inline;
+}
+input[id='pause']:checked ~ * .pause {
+  display: none;
+}
