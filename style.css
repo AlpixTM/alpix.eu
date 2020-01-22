@@ -4399,14 +4399,6 @@ label:last-child {
   border-radius: 0 .2em .2em 0;
 }
 
-input[id='exercise-1']:checked ~ .actions label[for='exercise-1'],
-input[id='exercise-2']:checked ~ .actions label[for='exercise-2'],
-input[id='exercise-3']:checked ~ .actions label[for='exercise-3'],
-input[id='exercise-4']:checked ~ .actions label[for='exercise-4'],
-input[id='pos-0']:checked ~ .actions label[for='pos-0'],
-input[id='pos-1']:checked ~ .actions label[for='pos-1'],
-input[id='pos-2']:checked ~ .actions label[for='pos-2'],
-input[id='pos-3']:checked ~ .actions label[for='pos-3'],
 input[id='red']:checked ~ .actions label[for='red'],
 input[id='cyan']:checked ~ .actions label[for='cyan'],
 input[id='lime']:checked ~ .actions label[for='lime'] {
@@ -4415,23 +4407,3 @@ input[id='lime']:checked ~ .actions label[for='lime'] {
   background-color: #0a4069;
 }
 
-input[id='exercise-2']:checked ~ .chart.grid .exercise .bar:nth-child(1) {
-  flex: 1 0 0%;
-}
-input[id='exercise-2']:checked ~ .chart.grid .exercise .bar:nth-child(2) {
-  flex: 1;
-}
-input[id='exercise-2']:checked ~ .chart.grid .exercise .bar:nth-child(3) {
-  flex: 1 0 30%;
-}
-
-input[id='exercise-3']:checked ~ .chart.grid .exercise .bar:nth-child(1), input[id='exercise-3']:checked ~ .chart.grid .exercise .bar:nth-child(2), input[id='exercise-3']:checked ~ .chart.grid .exercise .bar:nth-child(3) {
-  flex: 1;
-}
-
-input[id='exercise-4']:checked ~ .chart.grid .exercise .bar:nth-child(1), input[id='exercise-4']:checked ~ .chart.grid .exercise .bar:nth-child(2) {
-  flex: 1 0 30%;
-}
-input[id='exercise-4']:checked ~ .chart.grid .exercise .bar:nth-child(3) {
-  flex: 1;
-}
