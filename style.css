@@ -382,7 +382,7 @@ input[id='lime']:checked ~ .chart .growing-bar {
   width: 1.9%;
 }
 
-.bar-20 .growing-bar, input[id='exercise-2']:checked ~ .chart.grid .exercise .bar:nth-child(1) .growing-bar {
+.bar-20 .growing-bar {
   width: 2%;
 }
 
@@ -402,7 +402,7 @@ input[id='lime']:checked ~ .chart .growing-bar {
   width: 2.4%;
 }
 
-.bar-25 .growing-bar, input[id='pos-0']:checked ~ .chart .growing-bar {
+.bar-25 .growing-bar {
   width: 2.5%;
 }
 
@@ -502,7 +502,7 @@ input[id='lime']:checked ~ .chart .growing-bar {
   width: 4.9%;
 }
 
-.bar-50 .growing-bar, input[id='pos-1']:checked ~ .chart .growing-bar, input[id='exercise-2']:checked ~ .chart.grid .exercise .bar:nth-child(2) .growing-bar, input[id='exercise-4']:checked ~ .chart.grid .exercise .bar:nth-child(1) .growing-bar, input[id='exercise-4']:checked ~ .chart.grid .exercise .bar:nth-child(2) .growing-bar {
+.bar-50 .growing-bar {
   width: 5%;
 }
 
@@ -582,7 +582,7 @@ input[id='lime']:checked ~ .chart .growing-bar {
   width: 6.9%;
 }
 
-.bar-70 .growing-bar, input[id='exercise-3']:checked ~ .chart.grid .exercise .bar:nth-child(1) .growing-bar, input[id='exercise-3']:checked ~ .chart.grid .exercise .bar:nth-child(2) .growing-bar, input[id='exercise-3']:checked ~ .chart.grid .exercise .bar:nth-child(3) .growing-bar {
+.bar-70 .growing-bar {
   width: 7%;
 }
 
@@ -602,7 +602,7 @@ input[id='lime']:checked ~ .chart .growing-bar {
   width: 7.4%;
 }
 
-.bar-75 .growing-bar, input[id='pos-2']:checked ~ .chart .growing-bar {
+.bar-75 .growing-bar {
   width: 7.5%;
 }
 
@@ -622,7 +622,7 @@ input[id='lime']:checked ~ .chart .growing-bar {
   width: 7.9%;
 }
 
-.bar-80 .growing-bar, input[id='exercise-2']:checked ~ .chart.grid .exercise .bar:nth-child(3) .growing-bar {
+.bar-80 .growing-bar {
   width: 8%;
 }
 
@@ -702,7 +702,7 @@ input[id='lime']:checked ~ .chart .growing-bar {
   width: 9.9%;
 }
 
-.bar-100 .growing-bar, input[id='pos-3']:checked ~ .chart .growing-bar, input[id='exercise-4']:checked ~ .chart.grid .exercise .bar:nth-child(3) .growing-bar {
+.bar-100 .growing-bar {
   width: 10%;
 }
 
@@ -4347,29 +4347,6 @@ END // CHART'S RULES
 *
 *
 */
-.chart.grid {
-  display: flex;
-  flex-direction: row;
-}
-.chart.grid .exercise {
-  flex: 0 0 100%;
-  display: flex;
-}
-.chart.grid .exercise .bar {
-  flex: 1;
-  margin: 0 .5em;
-}
-.chart.grid .exercise .bar:nth-child(2) {
-  z-index: 8;
-  flex: 1 0 40%;
-}
-.chart.grid .exercise .bar:first-child {
-  z-index: 10;
-  margin-left: 0;
-}
-.chart.grid .exercise .bar:last-child {
-  margin-right: 0;
-}
 
 .actions {
   display: flex;
@@ -4399,6 +4376,8 @@ label:last-child {
   border-radius: 0 .2em .2em 0;
 }
 
+input[id='pause']:checked ~ .actions label[for='pause'],
+input[id='resume']:checked ~ .actions label[for='resume'],
 input[id='red']:checked ~ .actions label[for='red'],
 input[id='cyan']:checked ~ .actions label[for='cyan'],
 input[id='lime']:checked ~ .actions label[for='lime'] {
