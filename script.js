@@ -50,11 +50,6 @@ async function run() {
  */
 function updatePercents(iterator) {
     iterator /= 10;
-    if(iterator > 0) {
-        while(iterator%10 === 0) {
-            iterator /= 10;
-        }
-    }
 
     // Max 100%
     if(iterator > 100) {
