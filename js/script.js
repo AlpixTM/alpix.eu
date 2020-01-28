@@ -9,10 +9,11 @@ function Sleep(milliseconds) {
 async function run() {
     var colId = 1;
     var bar = $(".bar");
+    var resume = $("#resume");
     var i = 1001;
 
     while(true) {
-        while($("#resume").prop('checked')) {
+        while(resume.prop('checked')) {
             // Remove old progress class, so you can add the new class in the next step
             bar.removeClass("bar-" + i);
 
