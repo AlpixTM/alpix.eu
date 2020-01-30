@@ -7,10 +7,10 @@ function Sleep(milliseconds) {
 }
 
 async function run() {
-    var colId = 1;
-    var bar = $(".bar");
-    var resume = $("#resume");
-    var i = 1001;
+    let colId = 1;
+    const bar = $(".bar");
+    const resume = $("#resume");
+    let i = 1001;
 
     while(true) {
         while(resume.prop('checked')) {
