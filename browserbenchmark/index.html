@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alpix.eu</title>
+    <meta content="Pure CSS Progress, a pretty liquid progress-bar by RGG" name="description">
+    <meta content="chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+
+    <link href="../css/style.min.css" rel="stylesheet">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>This WebSite <strong>Alpix.eu</strong> is stressing your Browser</h1>
+            <p>How long does it need to calculate every factorial from 0 to 1000?</p>
+        </header>
+        <section>
+            <article>
+                <input checked class="1" id="red" name="switch-color" type="radio">
+                <input class="2" id="cyan" name="switch-color" type="radio">
+                <input class="3" id="lime" name="switch-color" type="radio">
+                <div class="chart">
+                    <div class="bar bar-0 white">
+                        <div class="face top">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face side-0">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face floor">
+                            <div class="growing-bar"></div>
+                        </div>
+                        <div class="face side-a"></div>
+                        <div class="face side-b"></div>
+                        <div class="face side-1">
+                            <div class="growing-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="percent">0%</p>
+                <p>You can change the color :)</p>
+                <nav class="actions">
+                    <label for="red">Magenta</label>
+                    <label for="cyan">Cyan</label>
+                    <label for="lime">Lime</label>
+                </nav>
+
+                <p>You can pause and resume this :)</p>
+
+                <input class="" id="pause" name="status" type="radio">
+                <input checked  id="resume" name="status" type="radio">
+
+                <nav class="actions">
+                    <label for="pause" class="pause">Pause</label>
+                    <label for="resume" class="resume">Resume</label>
+                </nav>
+
+            </article>
+        </section>
+    </div>
+</body>
+
+</html>
