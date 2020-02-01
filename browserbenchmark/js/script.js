@@ -7,13 +7,13 @@ function Sleep(milliseconds) {
 }
 
 function fact(n) {
-    let test = 1;
+    let factorial = new bigInt(1);
     while(n > 0) {
-        test *= n;
+        factorial = factorial.times(n);
         n--;
     }
 
-    return test;
+    return factorial.toString();
 }
 
 async function run() {
@@ -29,7 +29,7 @@ async function run() {
 
             //if its at the end reset it
             //else just let it grow further
-            if (i > 1000) {
+            if (i >= 1000) {
                 await Sleep(500);
                 i = 0;
                 bar.removeClass("bar-0");
@@ -45,6 +45,10 @@ async function run() {
             }
             else {
                 i++;
+
+                let max = 10000;
+                let n = i * max;
+
                 updatePercents(i, fact(i));
 
                 bar.addClass("bar-" + (i));
@@ -57,8 +61,9 @@ async function run() {
 }
 
 /*
- * Update the text that shows the progress in percent
+ * Update the text that shows the results
  */
 function updatePercents(iterator, faculty) {
-    $(".percent").text("Faculty of " + iterator +  " is " + faculty);
+    $(".info").text("Faculty of " + iterator +  " is " + faculty);
 }
+

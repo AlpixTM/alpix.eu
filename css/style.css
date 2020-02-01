@@ -125,6 +125,10 @@ p span {
   margin-bottom: 4em;
 }
 
+.factorial {
+  word-break: break-all;
+}
+
 /*
 *
 *
