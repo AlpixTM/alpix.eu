@@ -354,6 +354,9 @@ input[id='lime']:checked ~ .actions label[for='lime'] {
 
 input[id='resume']:checked ~ * .pause {
   display: inline;
+  color: #76c900;
+  border: 1px solid #031523;
+  background-color: #0a4069;
 }
 input[id='resume']:checked ~ * .resume {
   display: none;
@@ -361,6 +364,9 @@ input[id='resume']:checked ~ * .resume {
 
 input[id='pause']:checked ~ * .resume {
   display: inline;
+  color: #76c900;
+  border: 1px solid #031523;
+  background-color: #0a4069;
 }
 input[id='pause']:checked ~ * .pause {
   display: none;
