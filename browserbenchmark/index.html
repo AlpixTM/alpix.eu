@@ -19,13 +19,31 @@
     <div class="container">
         <header>
             <h1>This WebSite <strong>Alpix.eu</strong> is stressing your Browser</h1>
-            <p>How long does it need to calculate every factorial from 0 to 1000?</p>
+            <p>How long does it need to calculate every <a href="https://en.wikipedia.org/wiki/Factorial"> factorial </a> from 0 to 10000?</p>
         </header>
         <section>
             <article>
                 <input checked class="1" id="red" name="switch-color" type="radio">
                 <input class="2" id="cyan" name="switch-color" type="radio">
                 <input class="3" id="lime" name="switch-color" type="radio">
+
+                <p>You can change the color :)</p>
+                <nav class="actions">
+                    <label for="red">Magenta</label>
+                    <label for="cyan">Cyan</label>
+                    <label for="lime">Lime</label>
+                </nav>
+
+                <p>You can pause and resume this :)</p>
+
+                <input  id="pause" name="status" type="radio">
+                <input checked  id="resume" name="status" type="radio">
+
+                <nav class="actions">
+                    <label for="pause" class="pause">Pause</label>
+                    <label for="resume" class="resume">Resume</label>
+                </nav>
+
                 <div class="chart">
                     <div class="bar bar-0 white">
                         <div class="face top">
@@ -44,25 +62,13 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div>
                     <p class="info factorial"></p>
                 </div>
-                <p>You can change the color :)</p>
-                <nav class="actions">
-                    <label for="red">Magenta</label>
-                    <label for="cyan">Cyan</label>
-                    <label for="lime">Lime</label>
-                </nav>
 
-                <p>You can pause and resume this :)</p>
 
-                <input class="" id="pause" name="status" type="radio">
-                <input checked  id="resume" name="status" type="radio">
-
-                <nav class="actions">
-                    <label for="pause" class="pause">Pause</label>
-                    <label for="resume" class="resume">Resume</label>
-                </nav>
 
             </article>
         </section>

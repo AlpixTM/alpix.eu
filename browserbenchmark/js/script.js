@@ -20,21 +20,19 @@ async function run() {
     let colId = 1;
     const bar = $(".bar");
     const resume = $("#resume");
-    let i = 1001;
+    let i = 10001;
 
     while(true) {
         while(resume.prop('checked')) {
             // Remove old progress class, so you can add the new class in the next step
-            bar.removeClass("bar-" + i);
+            bar.removeClass("bar-" + Math.trunc(i/10));
 
             //if its at the end reset it
             //else just let it grow further
-            if (i >= 1000) {
+            if (i >= 10000) {
                 await Sleep(500);
                 i = 0;
-                bar.removeClass("bar-0");
-                bar.addClass("bar-" + (i));
-                updatePercents(i);
+                bar.addClass("bar-0");
                 $("." + colId).prop('checked', true);
                 colId += 1;
                 if (colId > 3) {
@@ -46,17 +44,17 @@ async function run() {
             else {
                 i++;
 
-                let max = 10000;
-                let n = i * max;
-
                 updatePercents(i, fact(i));
 
-                bar.addClass("bar-" + (i));
-                await Sleep(50);
+                bar.addClass("bar-" + Math.trunc(i/10));
+                //Without this await for promise the browser just hangs
+                await Sleep(0);
             }
         }
 
-        await Sleep(10);
+        //Without this await for promise the browser just hangs
+        await Sleep(0);
+
     }
 }
 
@@ -64,6 +62,6 @@ async function run() {
  * Update the text that shows the results
  */
 function updatePercents(iterator, faculty) {
-    $(".info").text("Faculty of " + iterator +  " is " + faculty);
+    $(".info").text("Factorial of " + iterator +  " is " + faculty);
 }
 
