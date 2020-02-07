@@ -10,13 +10,19 @@ function Sleep(milliseconds) {
     This method returns the factorial of the number n as String
  */
 function fact(n) {
-    let factorial = new bigInt(1);
-    while(n > 0) {
-        factorial = factorial.times(n);
-        n--;
+    if(n >= 0) {
+        let factorial = new bigInt(1);
+        while(n > 0) {
+            factorial = factorial.times(n);
+            n--;
+        }
+
+        return factorial.toString();
+    }
+    else {
+        return "Bad value for n: " + n;
     }
 
-    return factorial.toString();
 }
 
 async function run() {
