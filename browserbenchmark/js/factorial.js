@@ -6,6 +6,9 @@ function Sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
+/*
+    This method returns the factorial of the number n as String
+ */
 function fact(n) {
     let factorial = new bigInt(1);
     while(n > 0) {
