@@ -26,7 +26,6 @@ function fact(n) {
 }
 
 async function run() {
-    let colId = 1;
     const bar = $(".bar");
     const resume = $("#resume");
     let i = 0;
@@ -55,7 +54,7 @@ async function run() {
             if((i/100)%5 === 0) {
                 timeSum += calcTime(start, performance.now());
                 start = performance.now();
-                updateTime(i,(i/100), timeSum)
+                updateTime(i,(i/100), timeSum);
             }
         }
         else {
@@ -77,7 +76,7 @@ async function run() {
         timeSum += calcTime(start, performance.now());
     }
 
-    updateTime(i,100, timeSum)
+    updateTime(i,100, timeSum);
 
 }
 
@@ -96,7 +95,7 @@ function calcTime(start, end) {
 }
 
 /*
-    update the displayed time
+    Update the displayed time
  */
 function updateTime(i, percent, ms) {
     const seconds = Math.round(ms/10)/100;
