@@ -60,13 +60,10 @@ async function run() {
         else {
             // Stop the timer
             if(start !== 0) {
-                console.log("NOT 0");
                 timeSum += calcTime(start, performance.now());
                 start = 0;
             }
         }
-
-        console.log(start);
 
         //Without this await for promise the browser just hangs
         await Sleep(0);
@@ -104,7 +101,7 @@ function updateTime(i, percent, ms) {
     }
     else {
         const remainderSeconds = Math.round((seconds%60)*100)/100;
-        const minutes = Math.trunc((seconds-remainderSeconds)/60);
+        const minutes = Math.round((seconds-(seconds%60))/60);
 
         if(remainderSeconds === 0) {
             $(".time").text("It took " + minutes + " minutes to reach " + i +"! (" + percent + "%)");
