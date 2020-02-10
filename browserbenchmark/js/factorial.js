@@ -56,6 +56,9 @@ async function run() {
                 start = performance.now();
                 updateTime(i,(i/100), timeSum);
             }
+
+            updatePercents(Math.trunc(i/10));
+
         }
         else {
             // Stop the timer
@@ -113,3 +116,16 @@ function updateTime(i, percent, ms) {
     }
 }
 
+/*
+ * Update the text that shows the progress in percent
+ */
+function updatePercents(iterator) {
+    iterator /= 10;
+
+    // Max 100%
+    if(iterator > 100) {
+        iterator = 100;
+    }
+
+    $(".percent").text(iterator + "%");
+}
