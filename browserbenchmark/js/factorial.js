@@ -33,6 +33,7 @@ async function run() {
 
     let start = performance.now();
     let timeSum = 0;
+    let truncI = 0;
 
     while(i < 10000) {
         if(resume.prop('checked')) {
@@ -43,13 +44,14 @@ async function run() {
             }
 
             // Remove old progress class, so you can add the new class in the next step
-            bar.removeClass("bar-" + Math.trunc(i/10));
+            bar.removeClass("bar-" + truncI);
 
             i++;
+            truncI =  Math.trunc(i/10);
 
             updateInfo(i, fact(i));
 
-            bar.addClass("bar-" + Math.trunc(i/10));
+            bar.addClass("bar-" + truncI);
 
             if((i/100)%5 === 0) {
                 timeSum += calcTime(start, performance.now());
@@ -57,7 +59,7 @@ async function run() {
                 updateTime(i,(i/100), timeSum);
             }
 
-            updatePercents(Math.trunc(i/10));
+            updatePercents(truncI);
 
         }
         else {
