@@ -150,12 +150,12 @@ function updateTweetText(ms) {
     //unhide
     template.removeAttr("style");
     template.attr("data-url", document.URL);
-    template.attr("data-text", "It took my browser " + getTimeText(ms) + "to calculate every factorial from 0! to 10000! How fast is your browser on your PC? Check it here:");
+    template.attr("data-text", "It took my browser " + getTimeText(ms) + " to calculate every factorial from 0! to 10000! How fast is your browser on your PC? Check it here:");
     template.attr("class", "twitter-share-button");
     twitterDiv.append(template);
 
     // Trigger the render of the button
     $.getScript("http://platform.twitter.com/widgets.js");
-    
+
     twitterDiv.show();
 }
