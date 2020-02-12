@@ -35,7 +35,7 @@ async function run() {
     let timeSum = 0;
     let truncI = 0;
 
-    while(i < 10000) {
+    while(i < 1000) {
         if(resume.prop('checked')) {
 
             // Restart the timer
@@ -79,6 +79,7 @@ async function run() {
     }
 
     updateTime(i,100, timeSum);
+    updateTweetText(timeSum);
 
 }
 
@@ -100,22 +101,27 @@ function calcTime(start, end) {
     Update the displayed time
  */
 function updateTime(i, percent, ms) {
+    const timeText = getTimeText(ms);
+    $(".time").text("It took " + timeText + " to reach " + i +"! (" + percent + "%)");
+}
+
+function getTimeText(ms) {
     const seconds = Math.round(ms/10)/100;
     if(seconds < 60) {
-        $(".time").text("It took " + seconds + " seconds to reach " + i +"! (" + percent + "%)");
+        return seconds + " seconds";
     }
     else {
         const remainderSeconds = Math.round((seconds%60)*100)/100;
         const minutes = Math.round((seconds-(seconds%60))/60);
 
         if(remainderSeconds === 0) {
-            $(".time").text("It took " + minutes + " minutes to reach " + i +"! (" + percent + "%)");
+            return minutes + " minutes";
         }
         else {
-            $(".time").text("It took " + minutes + " minutes and " + remainderSeconds + " seconds to reach " + i +"! (" + percent + "%)");
-
+            return minutes + " minutes and " + remainderSeconds + " seconds";
         }
     }
+
 }
 
 /*
@@ -130,4 +136,26 @@ function updatePercents(iterator) {
     }
 
     $(".percent").text(iterator + "%");
+}
+
+/*
+ * Update the text for the tweet button
+ */
+function updateTweetText(ms) {
+    const twitterDiv = $('#twitter');
+    let template = $('#tweetBtnTemplate').clone();
+
+    twitterDiv.empty();
+    //unhide
+    template.removeAttr("style");
+    template.attr("data-url", document.URL);
+    template.attr("data-text", "It took my browser " + getTimeText(ms) + "to calculate every factorial from 0! to 10000! How fast is your browser on your PC? Check it here:");
+    template.attr("class", "twitter-share-button");
+    twitterDiv.append(template);
+    twitterDiv.show();
+
+    console.log(template);
+
+    // Trigger the render of the button
+    $.getScript("http://platform.twitter.com/widgets.js");
 }
