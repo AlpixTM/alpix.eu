@@ -155,7 +155,7 @@ function updateTweetText(ms) {
     twitterDiv.append(template);
 
     // Trigger the render of the button
-    $.getScript("http://platform.twitter.com/widgets.js");
+    $.getScript("https://platform.twitter.com/widgets.js");
 
     twitterDiv.show();
 }
