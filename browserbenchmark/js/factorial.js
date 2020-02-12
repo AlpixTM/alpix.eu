@@ -35,7 +35,7 @@ async function run() {
     let timeSum = 0;
     let truncI = 0;
 
-    while(i < 1000) {
+    while(i < 10000) {
         if(resume.prop('checked')) {
 
             // Restart the timer
