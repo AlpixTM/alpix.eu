@@ -80,6 +80,7 @@ async function run() {
 
     updateTime(i,100, timeSum);
     updateTweetText(timeSum);
+    $(".controls").hide();
 
 }
 
@@ -152,10 +153,9 @@ function updateTweetText(ms) {
     template.attr("data-text", "It took my browser " + getTimeText(ms) + "to calculate every factorial from 0! to 10000! How fast is your browser on your PC? Check it here:");
     template.attr("class", "twitter-share-button");
     twitterDiv.append(template);
-    twitterDiv.show();
-
-    console.log(template);
 
     // Trigger the render of the button
     $.getScript("http://platform.twitter.com/widgets.js");
+    
+    twitterDiv.show();
 }
