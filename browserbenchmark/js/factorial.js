@@ -150,7 +150,7 @@ function updateTweetText(ms) {
     //unhide
     template.removeAttr("style");
     template.attr("data-url", document.URL);
-    template.attr("data-text", "It took my browser " + getTimeText(ms) + " to calculate every factorial from 0! to 10000!" + "\nHow fast is your browser on your PC? \n Check it here:\n");
+    template.attr("data-text", "It took my browser " + getTimeText(ms) + " to calculate every factorial from 0! to 10000!" + "\nHow fast is your browser on your PC? \nCheck it here:\n");
     template.attr("class", "twitter-share-button");
     twitterDiv.append(template);
 
