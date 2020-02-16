@@ -5,11 +5,13 @@ html, body {
     padding:0;
 }
 
-.site {
+.matrix {
     height:100%;
     overflow: hidden;
 }
 
-.test  {
+.line {
     position: relative;
+    height: 100%;
+    display: table;
 }

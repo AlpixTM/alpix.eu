@@ -7,15 +7,57 @@ function Sleep(milliseconds) {
 }
 
 async function run() {
-    $(".site").append("<div id='1' class='test'>x</div>");
-    $(".site").append("<div id='2' class='test'>y</div>");
-
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    $("#line-1").append("<div class=''>" + randChar() + "</div>");
 
 
     for (let j = 0; j < 1000; j++) {
-        $("#1").css("top", j/10 + "%");
-        $("#2").css("top", j/10 + "%");
+        $("#line-1").css("top", j/10 + "%");
         await Sleep(10);
     }
 
+}
+
+function randChar() {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+
+    result = characters.charAt(Math.floor(Math.random()*charactersLength));
+
+    return result;
 }
