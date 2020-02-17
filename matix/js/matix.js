@@ -7,11 +7,18 @@ function Sleep(milliseconds) {
 }
 
 async function run() {
+    var lineIds = ["line-1"];
+
     var numberOfElements = Math.floor(Math.random()*40)+10;
     for (let j = 0; j < numberOfElements; j++) {
         $("#line-1").append("<div class=''>" + randChar() + "</div>");
     }
 
+
+    for (let j = 1000; 0 < j; j--) {
+        $("#line-1").css("bottom", j/10 + "%");
+        await Sleep(10);
+    }
 
     for (let j = 0; j < 1000; j++) {
         $("#line-1").css("top", j/10 + "%");
