@@ -7,42 +7,10 @@ function Sleep(milliseconds) {
 }
 
 async function run() {
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
-    $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    var numberOfElements = Math.floor(Math.random()*40)+10;
+    for (let j = 0; j < numberOfElements; j++) {
+        $("#line-1").append("<div class=''>" + randChar() + "</div>");
+    }
 
 
     for (let j = 0; j < 1000; j++) {
