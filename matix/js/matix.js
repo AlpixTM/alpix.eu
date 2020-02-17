@@ -20,6 +20,8 @@ async function run() {
         await Sleep(10);
     }
 
+    $("#line-1").removeAttr("style");
+
     for (let j = 0; j < 1000; j++) {
         $("#line-1").css("top", j/10 + "%");
         await Sleep(10);
