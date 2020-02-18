@@ -9,21 +9,19 @@ function Sleep(milliseconds) {
 async function run() {
     var lineIds = ["line-1"];
 
-    var numberOfElements = Math.floor(Math.random()*50)+10;
-    for (let j = 0; j < numberOfElements; j++) {
-        $("#line-1").append("<div class='elements'>" + randChar() + "</div>");
-    }
-
+    createLine("innerLine-1");
+    createLine("innerLine-2");
 
     for (let j = 1000; 0 < j; j--) {
         $("#line-1").css("bottom", j/10 + "%");
+        $("#line-2").css("bottom", j/10 + "%");
         await Sleep(10);
     }
 
-    $("#line-1").removeAttr("style");
-
     for (let j = 0; j < 1000; j++) {
-        //$("#line-1").css("top", j/10 + "%");
+        $("#line-1").css("bottom", "-" + j/10 + "%");
+        $("#line-2").css("bottom", "-" + j/10 + "%");
+
         await Sleep(10);
     }
 
@@ -37,4 +35,17 @@ function randChar() {
     result = characters.charAt(Math.floor(Math.random()*charactersLength));
 
     return result;
+}
+
+function createLine(id) {
+
+    //chars
+    var numberOfElements = Math.floor(Math.random()*50)+10;
+    for (let j = 0; j < numberOfElements; j++) {
+        $("#" + id).append("<div class='elements'>" + randChar() + "</div>");
+    }
+
+
+    //empty divs
+
 }

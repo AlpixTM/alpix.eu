@@ -8,16 +8,17 @@ html, body {
 .matrix {
     height:100%;
     overflow: hidden;
+    display: flex;
 }
 
 .line {
     position: relative;
     height: 100%;
     display: table;
+    padding-right: 1px;
 }
 
 .innerLine {
-    position: absolute;
-    display: table;
-    bottom: 0;
+    display: table-cell;
+    vertical-align: bottom;
 }
