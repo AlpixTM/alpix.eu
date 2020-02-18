@@ -7,8 +7,8 @@ function Sleep(milliseconds) {
 }
 
 async function run() {
-    var lineIds = ["line-1"];
-
+    var lineIds = ["line-1"]
+    
     createLine("innerLine-1");
     createLine("innerLine-2");
 
@@ -44,6 +44,9 @@ function createLine(id) {
     for (let j = 0; j < numberOfElements; j++) {
         $("#" + id).append("<div class='elements'>" + randChar() + "</div>");
     }
+
+    $("#" + id).css("border-bottom",  Math.floor(Math.random()*50) + "px solid transparent");
+
 
 
     //empty divs
