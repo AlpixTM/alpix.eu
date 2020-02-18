@@ -15,3 +15,9 @@ html, body {
     height: 100%;
     display: table;
 }
+
+.innerLine {
+    position: absolute;
+    display: table;
+    bottom: 0;
+}

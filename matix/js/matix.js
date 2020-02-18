@@ -9,9 +9,9 @@ function Sleep(milliseconds) {
 async function run() {
     var lineIds = ["line-1"];
 
-    var numberOfElements = Math.floor(Math.random()*40)+10;
+    var numberOfElements = Math.floor(Math.random()*50)+10;
     for (let j = 0; j < numberOfElements; j++) {
-        $("#line-1").append("<div class=''>" + randChar() + "</div>");
+        $("#line-1").append("<div class='elements'>" + randChar() + "</div>");
     }
 
 
@@ -23,7 +23,7 @@ async function run() {
     $("#line-1").removeAttr("style");
 
     for (let j = 0; j < 1000; j++) {
-        $("#line-1").css("top", j/10 + "%");
+        //$("#line-1").css("top", j/10 + "%");
         await Sleep(10);
     }
 
