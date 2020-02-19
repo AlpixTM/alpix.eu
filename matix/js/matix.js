@@ -7,22 +7,27 @@ function Sleep(milliseconds) {
 }
 
 async function run() {
-    var lineIds = ["line-1"]
-    
-    createLine("innerLine-1");
-    createLine("innerLine-2");
+    var lineIds = [""];
+
+    console.log(lineIds);
+    let i = -1;
+    do {
+        i++;
+        createLine(i);
+    }
+    while ($("#line-" + i).visible(true));
 
     for (let j = 1000; 0 < j; j--) {
         $("#line-1").css("bottom", j/10 + "%");
         $("#line-2").css("bottom", j/10 + "%");
-        await Sleep(10);
+        await Sleep(15);
     }
 
     for (let j = 0; j < 1000; j++) {
         $("#line-1").css("bottom", "-" + j/10 + "%");
         $("#line-2").css("bottom", "-" + j/10 + "%");
 
-        await Sleep(10);
+        await Sleep(15);
     }
 
 }
@@ -37,8 +42,15 @@ function randChar() {
     return result;
 }
 
-function createLine(id) {
 
+function createLine(id) {
+    $("#matrix").append("            <div class=\"line\" id=\"line-" + id + "\">\n" +
+        "                <div class=\"innerLine\" id=\"innerLine-" +  id + "\"></div>\n" +
+        "            </div>")
+    fillLine("innerLine-" + id);
+}
+
+function fillLine(id) {
     //chars
     var numberOfElements = Math.floor(Math.random()*50)+10;
     for (let j = 0; j < numberOfElements; j++) {
@@ -47,8 +59,5 @@ function createLine(id) {
 
     $("#" + id).css("border-bottom",  Math.floor(Math.random()*50) + "px solid transparent");
 
-
-
     //empty divs
-
 }
