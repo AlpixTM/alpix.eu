@@ -3,6 +3,16 @@ html, body {
     height:100%;
     margin:0;
     padding:0;
+    cursor: default;
+}
+
+::-moz-selection {
+    color: inherit;
+    background-color: transparent;
+}
+::selection {
+    color: inherit;
+    background-color: transparent;
 }
 
 .matrix {
